@@ -1,0 +1,7 @@
+preprocessing:
+  train_file: data/train.csv
+  test_file: data/test.csv
+
+training:
+  test_size: .3
+  random_state: 0

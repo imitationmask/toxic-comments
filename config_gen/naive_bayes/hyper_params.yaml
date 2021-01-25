@@ -1,0 +1,6 @@
+training:
+  vectorizer: CountVectorizer
+  ngram_range: (1, 1)
+  stop_words: english
+  classifier: MultinomialNB
+

@@ -1,7 +1,25 @@
 preprocessing:
-  train_file: data/train.csv
-  test_file: data/test.csv
+  test_size: .3
+  train_file: data/mini_train.csv
+  test_file: data/mini_test.csv
+  random_state: 0
+  categories:
+    - toxic
+    - severe_toxic
+    - obscene
+    - threat
+    - insult
+    - identity_hate
+  input_text_column: comment_text
+  input_id_column: id
 
 training:
-  test_size: .3
-  random_state: 0
+  learning_rate: 1.0
+  dropout_rate: .5
+  batch_normalization: True
+  optimizer: sgd
+  epochs: 10
+  gradient_cliping: True
+
+predict:
+  output_file: data/submission.csv

@@ -1,0 +1,27 @@
+preprocessing:
+  categories:
+  - toxic
+  - severe_toxic
+  - obscene
+  - threat
+  - insult
+  - identity_hate
+  input_converter: CountVectorizer
+  input_id_column: id
+  input_text_column: comment_text
+  random_state: 0
+  test_file: data/mini_test.csv
+  test_size: 0.3
+  train_file: data/mini_train.csv
+training:
+  batch_normalization: true
+  classifier: MultinomialNB
+  dropout_rate: 0.5
+  epochs: 10
+  gradient_cliping: true
+  learning_rate: 1.0
+  ngram_range: (1, 1)
+  optimizer: sgd
+  stop_words: english
+predict:
+  output_file: data/submission.csv
